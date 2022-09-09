@@ -1,0 +1,56 @@
+/*CREANDO MAIN DE AGREGAR PALABRA*/
+.flex-agregar{
+    display: flex;
+    grid-column: 1 / span 3;
+    background-color: #74d8bc;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+
+    display: none;
+}
+.flex-agregar__textarea{
+    height: 100px;
+    width: 30%;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    resize: none;
+    background-color: #D9ED92;
+    border: 3px solid #073C66;
+    padding: 30px;
+    font-size: 30px;
+    text-decoration: none;
+    text-align: center;
+}
+.botones__add{
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #184E77;
+    color: #D9ED92;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: 3px solid #D9ED92;
+    border-radius: 10px;
+    transition: all .2s;
+}
+.botones__back{
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #184E77;
+    color: #D9ED92;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: 3px solid #D9ED92;
+    border-radius: 10px;
+    transition: all .2s;
+}
+.botones__add:hover, .botones__back:hover{
+    scale: 1.15;
+    background-color: #073C66;
+}

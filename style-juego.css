@@ -1,0 +1,293 @@
+/*CREANDO MAIN DEL JUEGO*/
+.flex-juego{
+    display: flex;
+    grid-column: 1 / span 3;
+    background-color: #74d8bc;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    display: none; 
+}
+.flex-juego__boton1{
+    width: 150px;
+    height: 70px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #184E77;
+    color: #D9ED92;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    border: 3px solid #D9ED92;
+    border-radius: 10px;
+    transition: all .2s;
+    position: absolute;
+    right: 30px;
+}
+.flex-juego__boton2{
+    width: 70px;
+    height: 70px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #184E77;
+    color: #D9ED92;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    border: 3px solid #D9ED92;
+    border-radius: 50%;
+    transition: all .2s;
+    position: absolute;
+    left: 30px;
+}
+.flex-juego__boton3{
+    width: 150px;
+    height: 70px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #184E77;
+    color: #D9ED92;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    border: 3px solid #D9ED92;
+    border-radius: 10px;
+    transition: all .2s;
+    position: absolute;
+    right: 30px;
+
+    display: none;
+}
+.flex-juego__boton1:hover, .flex-juego__boton2:hover, .flex-juego__boton3:hover{
+    scale: 1.15;
+    background-color: #073C66;
+}
+
+/*CREANDO HORCA*/
+.flex-juego__horca{
+    display: inline-block;
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 15px;
+    position: relative;
+}
+.linea-base-horizontal{
+    position: absolute;
+    background-color: black;
+    width: 150px;
+    height: 5px;
+    bottom: 20px;
+    left: 20px;
+    display: none;
+}
+.linea-base-vertical{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 250px;
+    bottom: 20px;
+    left: 40px;
+    display: none;
+}
+.linea-sup-horizontal{
+    position: absolute;
+    background-color: black;
+    width: 130px;
+    height: 5px;
+    left: 40px;
+    top: 30px;
+    display: none;
+}
+.linea-sup-vertical{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 20px;
+    left: 170px;
+    top: 30px;
+    display: none;
+}
+.cabeza{
+    position: absolute;
+    border: 5px solid black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    left: 150px;
+    top: 50px;
+    display: none;
+}
+.cuerpo{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 70px;
+    left: 170px;
+    top: 91px;
+    display: none;
+}
+.brazo1{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 40px;
+    left: 160px;
+    top: 100px;
+    rotate: 30deg;
+    display: none;
+}
+.brazo2{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 40px;
+    left: 180px;
+    top: 100px;
+    rotate: 150deg;
+    display: none;
+}
+.pierna1{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 40px;
+    left: 160px;
+    top: 156px;
+    rotate: 30deg;
+    display: none;
+}
+.pierna2{
+    position: absolute;
+    background-color: black;
+    width: 5px;
+    height: 40px;
+    left: 180px;
+    top: 156px;
+    rotate: 150deg;
+    display: none;
+}
+
+.flex-juego__renglones{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: transparent;
+    width: 50%;
+    height: 100px;
+    margin-bottom: 5px;
+}
+.flex-juego__letraErrada{
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+    width: 50%;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+    color: #666;
+    font-weight: bold;
+    letter-spacing: 10px;
+    resize: none;    
+}
+.flex-juego__ganador{
+    position: absolute;
+    background-color: #D9ED92;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    opacity: 0;
+    top: 70px;
+    top: 0;
+    left: auto;
+    right: auto;
+}
+.ganador__mensaje{
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid #073C66;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #073C66;
+    color: #D9ED92;
+    font-weight: bold;
+}
+.flex-juego__perdedor{
+    position: absolute;
+    background-color: #FF3333;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    align-items: center;
+    justify-content: center;
+    transition: all .5s;
+    opacity: 0;
+    top: 70px;
+    top: 0;
+    left: auto;
+    right: auto;
+}
+.perdedor__mensaje{
+    width: 30%;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #FF9999;
+    color: #F00000;
+    font-weight: bold;
+}
+.flex-juego__caja{
+    display: flex;
+    position: absolute;
+    top: auto;
+    left: auto;
+    border: none;
+    background-color: #D9ED92;
+    color: black;
+    border-radius: 5px;
+    border: 2px solid #073C66;
+    padding: 5px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 350px;
+
+    display: none;
+}
+.caja__palabra{
+    border: none;
+    resize: none;
+    background-color: #D9ED92;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #073C66;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+.caja__boton{
+    background-color: #073C66;
+    color: #D9ED92;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    border: #184E77;
+    border-radius: 5px;
+    width: 50%;
+    height: 70px;
+    margin-top: 30px;
+    transition: .2s;
+}
+.caja__boton:hover{
+    scale: 1.2;
+    background-color: #184E77;
+}

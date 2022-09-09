@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-juego.css">
+    <link rel="stylesheet" href="style-agregar.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
+    <link rel="icon" href="horca-ico.png">
+    <title>Juego del Ahorcado</title>
+</head>
+
+<body onkeypress="leerLetra(event)">
+    <main>
+        <div class="grid-container">
+            <div class="logo">
+                <div class="logo__contenedor">
+                    <img class="logo__imagen" src="horca.png">
+                </div>
+            </div>
+            <div class="titulo">
+                <h1 class="titulo__h1">JUEGO DEL AHORCADO</h1>
+            </div>
+            <div class="aclaracion">
+                <h4 class="aclaracion__solo-mayus">EDICIÓN: ANIMALES</h4>
+            </div>
+
+            <div class="flex-inicio">
+                <button class="flex-inicio__boton1">JUGAR</button>
+                <button class="flex-inicio__boton2">AGREGAR PALABRA</button>
+            </div>
+            <div class="flex-juego">
+                <button class="flex-juego__boton1">DESISTIR</button>
+                <button class="flex-juego__boton2">ATRAS</button>
+                <button class="flex-juego__boton3">JUGAR DE NUEVO</button>
+                <div class="flex-juego__horca">
+                    <div class="linea-base-horizontal"></div>
+                    <div class="linea-base-vertical"></div>
+                    <div class="linea-sup-horizontal"></div>
+                    <div class="linea-sup-vertical"></div>
+                    <div class="cabeza"></div>
+                    <div class="cuerpo"></div>
+                    <div class="brazo1"></div>
+                    <div class="brazo2"></div>
+                    <div class="pierna1"></div>
+                    <div class="pierna2"></div>
+                </div>
+                <div class="flex-juego__renglones">
+                </div>
+                <textarea disabled class="flex-juego__letraErrada">
+                </textarea>
+                <div class="flex-juego__ganador">
+                    <h4 class="ganador__mensaje">FELICIDADES, GANASTE</h4>
+                </div>
+                <div class="flex-juego__perdedor">
+                    <h4 class="perdedor__mensaje">PERDISTE :(</h4>
+                </div>
+                <div class="flex-juego__caja">
+                    <textarea disabled class="caja__palabra"></textarea>
+                    <button class="caja__boton">ACEPTAR</button>
+                </div>
+            </div>
+            
+            <div class="flex-agregar">
+                <textarea class="flex-agregar__textarea" onkeypress="nuevaPalabraEnter(event)"></textarea>
+                <div class="flex-agregar__botones">
+                    <button class="botones__add">AGREGAR PALABRA</button>
+                    <button class="botones__back">VOLVER AL MENU</button>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="footer__contacto">
+                    <a target="_blank" href="https://github.com/Gabriel100201"><i class='bx bxl-github'></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/gabriel-funes-ab8a0a24a/"><i class='bx bxl-linkedin-square'></i></a>
+                </div>
+                <p class="footer__texto">Desarrollado por Gabriel Funes</p>
+            </footer>
+        </div>
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>

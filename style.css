@@ -1,0 +1,117 @@
+/*CREANDO ESTRUCTURA DE LA PAGINA*/
+.grid-container{
+    display: grid;
+    background-color: aqua;
+    grid-template-rows: 70px 1fr 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+/*CREANDO HEADER*/
+.logo{
+    background-color: #34A0A4;
+    display: flex;
+    justify-content: start;
+}
+.logo__contenedor{
+    background-color: #D9ED92;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 70px;
+    height: 70px;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+}
+.logo__imagen{
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+}
+.titulo{
+    background-color: #34A0A4;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.titulo__h1{
+    background-color: #184E77;
+    color: #D9ED92;
+    border-radius: 20px;
+    display: inline-block;
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+    padding: 15px 25px;
+}
+.aclaracion{
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: #34A0A4;
+}
+.aclaracion__solo-mayus{
+    font-size: 20px;
+    color: #073C66;
+    background-color: #D9ED92;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+/*CREANDO MAIN*/
+.flex-inicio{
+    display: flex;
+    background-color: #52B69A;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    grid-column: 1 / span 3;
+}
+.flex-inicio__boton1, .flex-inicio__boton2{
+    width: 200px;
+    height: 70px;
+    padding: 10px;
+    margin: 20px;
+    font-family: 'Nunito', sans-serif;
+    background-color: #184E77;
+    color: #D9ED92;
+    font-weight: 800;
+    letter-spacing: 2px;
+    border: 3px solid #D9ED92;
+    border-radius: 10px;
+    transition: all .2s;
+}
+.flex-inicio__boton1:hover, .flex-inicio__boton2:hover{
+    scale: 1.15;
+    background-color: #073C66;
+}
+
+/*CREANDO FOOTER*/
+.footer{
+    background-color: #184E77;
+    grid-row: 3 / span 1;
+    grid-column: 1 / span 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer__texto{
+    color: #D9ED92;
+    font-weight: 500;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+}
+.footer__contacto i{
+    color: #D9ED92;
+    font-size: 30px;
+    padding-right: 15px;
+}
