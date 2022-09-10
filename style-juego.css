@@ -190,7 +190,7 @@
 }
 .flex-juego__ganador{
     position: absolute;
-    background-color: #D9ED92;
+    background-color: #6bdb70;
     display: flex;
     width: 100%;
     height: 70px;
@@ -209,11 +209,11 @@
     font-family: 'Nunito', sans-serif;
     text-align: center;
     font-weight: bold;
-    border: 2px solid #073C66;
+    border: 2px solid #02a526;
     border-radius: 10px;
-    padding: 15px;
-    background-color: #073C66;
-    color: #D9ED92;
+    padding: 5px;
+    background-color: #8eee90;
+    color: #054715;
     font-weight: bold;
 }
 .flex-juego__perdedor{
@@ -290,4 +290,45 @@
 .caja__boton:hover{
     scale: 1.2;
     background-color: #184E77;
+}
+
+.flex-juego__teclado{
+    display: flex;
+    flex-direction: column;
+    background-color: #D9ED92;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+
+    display: none;
+}
+.flex-juego__teclado button{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #073C66;
+    border: none;
+    border: 1px solid #D9ED92;
+    color: #D9ED92;
+    border-radius: 10px;
+}
+.flex-juego__teclado button:hover{
+    background-color: #184E77;
+}
+.teclado__fila1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.teclado__fila2{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.teclado__fila3{
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
