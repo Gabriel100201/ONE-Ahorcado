@@ -48,6 +48,9 @@
     .flex-juego__boton3{
         margin: 0px;
         top: 90px;
+        width: 80px;
+        height: 55px;
+        font-size: 10px;
     }
     .flex-juego__caja{
         width: 90%;
