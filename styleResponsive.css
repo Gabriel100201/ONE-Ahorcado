@@ -1,4 +1,8 @@
 @media screen and (max-width:800px){
+    .flex-juego__horca{
+        scale: 0.7;
+        margin-top: 10px;
+    }
     .flex-juego__caja{
         margin-bottom: 150px;
     }
@@ -30,10 +34,16 @@
     .flex-juego__boton1{
         margin: 0px;
         top: 90px;
+        width: 80px;
+        height: 55px;
+        font-size: 10px;
     }
     .flex-juego__boton2{
         margin: 0px;
         top: 90px;
+        width: 58px;
+        height: 58px;
+        font-size: 10px;
     }
     .flex-juego__boton3{
         margin: 0px;
