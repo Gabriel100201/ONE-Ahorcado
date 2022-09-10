@@ -257,3 +257,100 @@ botonAceptar.onclick = quitarVentana;
 
 
 crear(palabras, nAleatorio);
+
+//TECLADO MOVILE//
+const Qtecla = document.querySelector(".Q");
+const Wtecla = document.querySelector(".W");
+const Etecla = document.querySelector(".E");
+const Rtecla = document.querySelector(".R");
+const Ttecla = document.querySelector(".T");
+const Ytecla = document.querySelector(".Y");
+const Utecla = document.querySelector(".U");
+const Itecla = document.querySelector(".I");
+const Otecla = document.querySelector(".O");
+const Ptecla = document.querySelector(".P");
+const Atecla = document.querySelector(".A");
+const Stecla = document.querySelector(".S");
+const Dtecla = document.querySelector(".D");
+const Ftecla = document.querySelector(".F");
+const Gtecla = document.querySelector(".G");
+const Htecla = document.querySelector(".H");
+const Jtecla = document.querySelector(".J");
+const Ktecla = document.querySelector(".K");
+const Ltecla = document.querySelector(".L");
+const Ñtecla = document.querySelector(".Ñ");
+const Ztecla = document.querySelector(".Z");
+const Xtecla = document.querySelector(".X");
+const Ctecla = document.querySelector(".C");
+const Vtecla = document.querySelector(".V");
+const Btecla = document.querySelector(".B");
+const Ntecla = document.querySelector(".N");
+const Mtecla = document.querySelector(".M");
+Qtecla.onclick = function(){
+    detectarLetra("Q")};
+Wtecla.onclick = function (){
+    detectarLetra("W")};
+Etecla.onclick = function (){
+    detectarLetra("E")};
+Rtecla.onclick = function (){
+    detectarLetra("R")};
+Ttecla.onclick = function (){
+    detectarLetra("T")};
+Ytecla.onclick = function (){
+    detectarLetra("Y")};
+Utecla.onclick = function (){
+    detectarLetra("U")};
+Itecla.onclick = function (){
+    detectarLetra("I")};
+Otecla.onclick = function (){
+    detectarLetra("O")};
+Ptecla.onclick = function (){
+    detectarLetra("P")};
+Atecla.onclick = function (){
+    detectarLetra("A")};
+Stecla.onclick = function (){
+    detectarLetra("S")};
+Dtecla.onclick = function (){
+    detectarLetra("D")};
+Ftecla.onclick = function (){
+    detectarLetra("F")};
+Gtecla.onclick = function (){
+    detectarLetra("G")};
+Htecla.onclick = function (){
+    detectarLetra("H")};
+Jtecla.onclick = function (){
+    detectarLetra("J")};
+Ktecla.onclick = function (){
+    detectarLetra("K")};
+Ltecla.onclick = function (){
+    detectarLetra("L")};
+Ñtecla.onclick = function (){
+    detectarLetra("Ñ")};
+Ztecla.onclick = function (){
+    detectarLetra("Z")};
+Xtecla.onclick = function (){
+    detectarLetra("X")};
+Ctecla.onclick = function (){
+    detectarLetra("C")};
+Vtecla.onclick = function (){
+    detectarLetra("V")};
+Btecla.onclick = function (){
+    detectarLetra("B")};
+Ntecla.onclick = function (){
+    detectarLetra("N")};
+Mtecla.onclick = function (){
+    detectarLetra("M")};
+
+function detectarLetra(x){
+    letra = x; 
+    if ((puedoTeclear==true)&&(letrasMayus.includes(letra))){
+        if (palabras[nAleatorio].includes(letra)){
+            agregarLetra();
+        }
+        else {
+            actualizarHorca();
+        }
+    }
+    condicionGanar();
+    condicionPerder();
+}

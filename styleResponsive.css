@@ -1,0 +1,51 @@
+@media screen and (max-width:800px){
+    .flex-juego__caja{
+        margin-bottom: 150px;
+    }
+    .flex-juego__teclado{
+        display: flex;
+    }
+    .logo__contenedor{
+        width: 100%;
+        border-radius: 0%;
+    }
+    .titulo{
+        background-color: #D9ED92;
+    }
+    .titulo__h1{
+        padding: 5px;
+        font-size: 20px;
+    }
+    .aclaracion{
+        background-color: #D9ED92;
+    }
+    .aclaracion__solo-mayus{
+        font-size: 15px;
+        border: none;
+        color: top;
+    }
+    .flex-juego__renglones{
+        width: 90%;
+    }
+    .flex-juego__boton1{
+        margin: 0px;
+        top: 90px;
+    }
+    .flex-juego__boton2{
+        margin: 0px;
+        top: 90px;
+    }
+    .flex-juego__boton3{
+        margin: 0px;
+        top: 90px;
+    }
+    .flex-juego__caja{
+        width: 90%;
+    }
+}
+@media screen and (max-width:500px){
+    .aclaracion__solo-mayus{
+        font-size: 15px;
+        width: 75%;
+    }
+}
