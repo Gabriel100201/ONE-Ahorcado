@@ -1,4 +1,7 @@
 @media screen and (max-width:800px){
+    .ganador__mensaje{
+        width: 50%;
+    }
     .flex-juego__horca{
         scale: 0.7;
         margin-top: 10px;

@@ -1,4 +1,6 @@
-var palabras = ["CUERVO","MARIPOSA","CANGREJO","MEDUSA","CONEJO","PANDA","GALLINA","TIGRE","KOALA","VACA","FOCA","PERRO","OSO","LORO","CERDO","LLAMA","PATO","BALLENA"];
+var palabras = [];
+var cadena = "CUERVO MARIPOSA CANGREJO MEDUSA CONEJO PANDA GALLINA TIGRE KOALA VACA FOCA PERRO OSO LOR CERDO LLAMA PATO BALLENA GATO RATA DELFIN TIBURON GALLO PEZ BURRO MULA AGUILA HALCON TERO HURON ABEJA CAMELLO CISNE ASNO AVISPA TORTUGA ERIZO GANSO GORILA MONO GRILLO LEON ZEBRA LOBO LEMUR RANA SAPO PALOMA TOPO TORO TRITON URRACA VENADO ZORRO YACARE"
+palabras = cadena.split(" ");
 var letrasMayus = "QWERTYUIOPASDFGHJKLÑZXCVBNM";
 var letraMala = "";
 const pantalla1 = document.querySelector(".flex-inicio");
@@ -206,11 +208,23 @@ function jugarOtraVez(){
 }
 function nuevaPalabra(){
     var palabraNueva = agregarPalabra.value;
-    palabraNueva = palabraNueva.replace(/\n/g, " ");
-    palabraNueva = palabraNueva.replace(/ /g, "");
-    console.log(palabraNueva);
-    if (palabraNueva!=""){
+    if ((palabraNueva.length<9)&&(palabraNueva!="")){
+        palabraNueva = palabraNueva.replace(/\n/g, " ");
+        palabraNueva = palabraNueva.replace(/ /g, "");
         palabras.push(palabraNueva.toUpperCase());
+
+        const tick = document.querySelector(".tick__img");
+        tick.style = "opacity: 1;";
+        setTimeout(function(){
+            tick.style = "opacity: 0;";
+        }, 300);
+    }
+    else{
+        const tick2 = document.querySelector(".tick__img2");
+        tick2.style = "opacity: 1;";
+        setTimeout(function(){
+            tick2.style = "opacity: 0;";
+        }, 300);
     }
     agregarPalabra.value = null;
 }
