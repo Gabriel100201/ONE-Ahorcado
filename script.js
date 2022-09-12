@@ -208,11 +208,23 @@ function jugarOtraVez(){
 }
 function nuevaPalabra(){
     var palabraNueva = agregarPalabra.value;
-    palabraNueva = palabraNueva.replace(/\n/g, " ");
-    palabraNueva = palabraNueva.replace(/ /g, "");
-    console.log(palabraNueva);
-    if (palabraNueva!=""){
+    if ((palabraNueva.length<9)&&(palabraNueva!="")){
+        palabraNueva = palabraNueva.replace(/\n/g, " ");
+        palabraNueva = palabraNueva.replace(/ /g, "");
         palabras.push(palabraNueva.toUpperCase());
+
+        const tick = document.querySelector(".tick__img");
+        tick.style = "opacity: 1;";
+        setTimeout(function(){
+            tick.style = "opacity: 0;";
+        }, 300);
+    }
+    else{
+        const tick2 = document.querySelector(".tick__img2");
+        tick2.style = "opacity: 1;";
+        setTimeout(function(){
+            tick2.style = "opacity: 0;";
+        }, 300);
     }
     agregarPalabra.value = null;
 }

@@ -9,6 +9,28 @@
 
     display: none;
 }
+.flex-agregar__tick{
+    margin-bottom: 20px;
+}
+.tick__img{
+    width: 70px;
+    opacity: 0;
+    transition: .3s;
+    position: absolute;
+    right: auto;
+    left: auto;
+}
+.tick__img2{
+    width: 70px;
+    opacity: 0;
+    transition: .3s;
+}
+.flex-agregar__condicion{
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 0px;
+    text-align: center;
+    width: 70%;
+}
 .flex-agregar__textarea{
     height: 100px;
     width: 30%;

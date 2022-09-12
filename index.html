@@ -104,7 +104,12 @@
             </div>
             
             <div class="flex-agregar">
-                <textarea class="flex-agregar__textarea" onkeypress="nuevaPalabraEnter(event)"></textarea>
+                <div class="flex-agregar__tick">
+                    <img class="tick__img" src="accept.png">
+                    <img class="tick__img2" src="eliminar.png">
+                </div>
+                <textarea class="flex-agregar__textarea" onkeypress="nuevaPalabraEnter(event)" oninput="this.value = this.value.replace(/[^a-zA-Z]/,'')"></textarea>
+                <h4 class="flex-agregar__condicion">Máximo 8 letras, minimo 3 letras. No se aceptan caracteres especiales.</h4>
                 <div class="flex-agregar__botones">
                     <button class="botones__add">AGREGAR PALABRA</button>
                     <button class="botones__back">VOLVER AL MENU</button>
