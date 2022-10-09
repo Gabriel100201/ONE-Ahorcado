@@ -75,6 +75,7 @@ function condicionGanar(){
     if (cont==palabras[nAleatorio].length){
         mensajeGanador.style = "opacity: 1;";
         botonJugarDeNuevo.style = "display: inline-block;"
+        puedoTeclear = false;
     }
 }
 function condicionPerder(){
@@ -208,7 +209,7 @@ function jugarOtraVez(){
 }
 function nuevaPalabra(){
     var palabraNueva = agregarPalabra.value;
-    if ((palabraNueva.length<9)&&(palabraNueva!="")){
+    if ((palabraNueva.length<9)&&(palabraNueva!="")&&(palabraNueva.length>2)){
         palabraNueva = palabraNueva.replace(/\n/g, " ");
         palabraNueva = palabraNueva.replace(/ /g, "");
         palabras.push(palabraNueva.toUpperCase());
